@@ -1,5 +1,5 @@
 """
-Unit test for first end-point
+Unit test for second end-point
 """
 
 import json
@@ -12,7 +12,7 @@ def test_first_status_code(client):
     :param client: A app test client from the fixture
     :return: none
     """
-    response = client.get('/api/v1.0/first')
+    response = client.get('/api/v1.0/second')
     assert response.status_code == 200
 
 
@@ -22,6 +22,6 @@ def test_first_data(client):
     :param client: A app test client from the fixture
     :return: none
     """
-    response = client.get('/api/v1.0/first')
+    response = client.get('/api/v1.0/second')
     data = json.loads(response.text)
-    assert data['name'] == 'Jane'
+    assert data['name'] == 'Peter'
