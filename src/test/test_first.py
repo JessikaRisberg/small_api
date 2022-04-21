@@ -25,4 +25,3 @@ def test_first_data(client):
     response = client.get('/api/v1.0/first')
     data = json.loads(response.text)
     assert data['name'] == 'Jane'
-
