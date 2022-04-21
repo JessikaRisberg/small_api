@@ -2,8 +2,8 @@
 Mini Flask API mini file
 """
 
-from flask import Flask, Response
 import json
+from flask import Flask, Response
 
 
 def create_app():
