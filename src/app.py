@@ -5,6 +5,7 @@ Mini Flask API mini file
 from flask import Flask, Response
 import json
 
+
 def create_app():
     """
     Factory function for flask application
@@ -21,6 +22,7 @@ def create_app():
 
         return Response(json.dumps(data), 200, content_type='application/json')
     return app
+
 
 if __name__ == '__main__':
     create_app().run()
